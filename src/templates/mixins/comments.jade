@@ -1,0 +1,8 @@
+mixin comments(collection)
+  each comment in collection
+    h3
+      | #{comment.author}
+      br
+      small #{comment.date}
+    p
+      | #{comment.text}

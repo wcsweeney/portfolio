@@ -1,0 +1,12 @@
+extends layouts/front.jade
+
+include mixins/posts.jade
+
+block head_title
+  title Welcome | Metropolis
+
+block posts
+  - collection = []
+  - collection.push({title: 'Metropolis Residences', author: 'Metropolis', date: 'Posted on January 21st, 2014 at 9:00 PM', image: 'images/residences.jpg', link: 'residences.html'})
+
+  mixin posts(collection)

@@ -1,0 +1,29 @@
+extends layouts/main.jade
+
+include mixins/comments.jade
+include mixins/popular.jade
+
+block title
+  | Residences
+
+block author
+  | Metropolis
+
+block date
+  | Posted on January 21st, 2014 at 9:00 PM
+
+block image
+  img.img-responsive(src='images/residences.jpg')
+
+block content
+  | You won't be disappointed.
+
+block popular
+  - collection = []
+  - collection.push({ link: 'index.html', text: 'Metropolis' })
+  mixin popular(collection)
+
+block comments
+  - collection = [];
+  - collection.push({ author: 'Ludwig van Beethoven', date: '10:38 PM on January 21st, 2014', text: 'Thanks for the information!' })
+  mixin comments(collection)

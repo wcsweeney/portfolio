@@ -1,0 +1,8 @@
+mixin popular(collection)
+  .row
+    hr
+    .col-lg-6
+      ul.list-unstyled
+        each post in collection
+          li
+            a(href=post.link) #{post.text}

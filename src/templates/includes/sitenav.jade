@@ -1,0 +1,17 @@
+mixin navlink(link, title)
+  li
+    a(href=link)= title
+
+nav.navbar.navbar-fixed-top.navbar-inverse
+  .container
+    .navbar-header
+      button.navbar-toggle(data-toggle='collapse', data-target='#site-nav')
+        span.sr-only
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='#') WS DEV
+    #site-nav.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        +navlink('#', 'Link 1')
+        +navlink('#', 'Link 2')

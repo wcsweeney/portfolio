@@ -1,0 +1,62 @@
+doctype html
+//if lt IE 7
+html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+html.no-js.lt-ie9.lt-ie8
+//if IE 8
+html.no-js.lt-ie9
+// [if gt IE 8] <!
+html.no-js
+// <![endif]
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  title Chapter 2 - Tasty Eats Blog
+  meta(name='description', content='')
+  meta(name='viewport', content='width=device-width')
+  link(rel='stylesheet', href='styles/main.css')
+body
+  .container
+    h1
+      a(href='index.html') Metropolis
+    .row
+      .col-lg-8
+        h2
+          block title
+        p.lead
+          | by #{''}
+          block author
+        hr
+        p
+          span.glyphicon.glyphicon-time
+          block date
+        hr
+        block image
+        hr
+        p
+          block content
+        hr
+        .well
+          h4 Leave a Comment:
+          form(role='form')
+            .form-group
+              textarea.form-control(rows='3')
+            button.btn.btn-primary(type='submit') Submit
+        hr
+        block comments
+      .col-lg-4
+        .well
+          h4 Blog Search
+          .input-group
+            input.form-control(type='text')
+            span.input-group-btn
+              button.btn.btn-default(type='button')
+                span.glyphicon.glyphicon-search
+        .well
+          h4 Popular Blog Posts
+            block popular
+    hr
+    footer
+      .row
+        .col-lg-12
+          p Copyright © Metropolis

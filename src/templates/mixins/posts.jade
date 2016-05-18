@@ -1,0 +1,15 @@
+mixin posts(collection)
+  each post in collection
+    h2
+      a(href=post.link) #{post.title}
+    p.lead
+      | by #{post.author}
+    hr
+    p
+      span.glyphicon.glyphicon-time
+      | #{post.date}
+    hr
+    a(href=post.link)
+      img.img-responsive(src=post.image)
+    hr
+    br

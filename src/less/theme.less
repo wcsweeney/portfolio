@@ -1,0 +1,172 @@
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "variables.less";
+@import "mixins.less";
+
+
+body {
+  background-color: #444;
+  color: #999;
+}
+
+//
+// Wrapper
+// --------------------------------------------------
+
+#wrapper {
+  position: relative;
+  -webkit-transition: margin 0.3s;
+	     -o-transition: margin 0.3s;
+		      transition: margin 0.3s;
+  
+  &.wrapper-aside {
+    margin-left: -250px;
+    margin-right: 250px;
+  }
+}
+
+
+//
+// Sidebar
+// --------------------------------------------------
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #222;
+  border-left: 1px solid #000;
+  -webkit-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+		      transition: all 0.3s;
+  
+  &.sidebar-open {
+	 right: 0;
+  }
+  
+  .sidebar-wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+	
+  	> li > a {
+  	  display: block;
+  	  padding: 4px 25px;
+  	  font-weight: 600;
+  	  color: rgba(255, 255, 255, 0.7);
+  	  text-decoration: none;
+  	  overflow: hidden;
+  	  text-overflow: ellipsis;
+  	  white-space: nowrap;
+  	  -webkit-transition: color 0.15s;
+  		     -o-transition: color 0.15s;
+  			      transition: color 0.15s;
+  		  
+  	  &:hover,
+  	  &:focus {
+  		  color: white;
+  	  }
+  	}
+  }
+}
+
+
+//
+// Navbar
+// --------------------------------------------------
+
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1020;
+
+  .nav-container {
+    position: relative;
+    text-align: right;
+  }
+
+  .nav-logo {
+    padding: 10px;
+  }
+
+  ul {
+    list-style: none;
+
+    &,
+    & > li {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+
+    > li > a {
+      display: block;
+      color: #fff;
+      margin: 34px 0;
+      padding: 10px;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+
+  @media (min-width: @screen-md-min) {
+    .nav-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+
+//
+// 
+// --------------------------------------------------
+#hero-banner-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../img/hero-banner.jpg);
+  background-size: cover;
+}
+
+#hero-banner {
+  position: relative;
+  min-height: 400px;
+  z-index: 10;
+}
+
+
+//
+// Content
+// --------------------------------------------------
+
+#content {
+  padding: 100px 30px;
+}
+
+
+
